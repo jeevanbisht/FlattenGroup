@@ -29,7 +29,7 @@
  $ReadOnlyMode=$true
  
  # Below value incidates the safe number of objects that are allowed to be processed.
- $ChangeCountThreshold=40000
+ $ChangeCountThreshold=5
  
  
  
