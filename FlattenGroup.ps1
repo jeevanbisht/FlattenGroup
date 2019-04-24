@@ -24,9 +24,9 @@
  # This is where all the output files will be processed.
  $AppBaseFolder = "c:\temp"
 
- # Settings this value to  $fasle will not make any changes but allow you to assess the change/performance.
+ # Settings this value to  $true will not make any changes but allow you to assess the change/performance.
  # The summary and error report will provide you the list of the applicable changes.
- $ReadOnlyMode=$false
+ $ReadOnlyMode=$true
  
  # Below value incidates the safe number of objects that are allowed to be processed.
  $ChangeCountThreshold=40000
