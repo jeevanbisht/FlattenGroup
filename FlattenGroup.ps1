@@ -101,7 +101,7 @@
 
                 ### This is a user
                 ### Get a corresponding ADUserObject with Appropriate Attributes and Add to master UsersObjectList
-                $UsersObjectList.add( (Get-ADUser $ChildGroupMemberItemObject.Name  -Properties name,extensionAttribute1))
+                $UsersObjectList.add( (Get-ADUser $ChildGroupMemberItemObject.DistinguishedName  -Properties name,extensionAttribute1))
                                 
          
             }
