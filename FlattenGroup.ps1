@@ -36,7 +36,7 @@
  #=======================================================================================================
  
  #This is the group that will be expanded.
- $Group="FSParent"
+ $Group="GroupName"
 
  # This is the value of the Attribute to be updated
  $SKU="EMSE3-O365E5"
@@ -287,12 +287,16 @@
  
  ## SMTP Sections  
  #=================================================================================================================
- $username = "identtadmin@identt.onmicrosoft.com"
 
+ # UserName for SMTP
+ $username = "user@domain.com"
+
+ # Password for SMTP
  ## To save the initial password use the following command ontime
  ## (Get-Credential).Password | ConvertFrom-SecureString | Out-File "C:\Temp\Password.txt"
-
  $secureStringPwd =Get-Content "C:\temp\password.txt" | ConvertTo-SecureString  
+
+ # Creds for SMTP
  $creds = New-Object System.Management.Automation.PSCredential -ArgumentList $username, $secureStringPwd
  ##
 
