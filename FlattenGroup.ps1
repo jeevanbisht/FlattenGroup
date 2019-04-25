@@ -163,18 +163,18 @@
     
      
      ############# Make Changes ############
-     $ExistingSKU=      (Get-ADUser  -Identity $deltaUsersObjectListItem.Name  -Properties name,extensionAttribute1 | select extensionAttribute1).extensionAttribute1
+     $ExistingSKU=      (Get-ADUser  -Identity $deltaUsersObjectListItem.DistinguishedName  -Properties name,extensionAttribute1 | select extensionAttribute1).extensionAttribute1
 
      if ($ReadOnlyMode -eq $false)
      {
         ##This will update the extensionAttribute1
-        Get-ADUser  -Identity $deltaUsersObjectListItem.Name | SET-ADUSER –replace @{extensionAttribute1=$SKU} 
+        Get-ADUser  -Identity $deltaUsersObjectListItem.DistinguishedName | SET-ADUSER –replace @{extensionAttribute1=$SKU} 
         ## Write-Host  $deltaUsersObjectListItem.Name 
      }
 
 
      ############# Verify changes ############
-     $UpdatedSKU = (Get-ADUser  -Identity $deltaUsersObjectListItem.Name  -Properties name,extensionAttribute1 | select extensionAttribute1).extensionAttribute1
+     $UpdatedSKU = (Get-ADUser  -Identity $deltaUsersObjectListItem.DistinguishedName  -Properties name,extensionAttribute1 | select extensionAttribute1).extensionAttribute1
      if ( $SKU -ne     $UpdatedSKU)
      {
         $deltaUsersObjectChangeErrorCounter++
