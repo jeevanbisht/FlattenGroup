@@ -152,7 +152,7 @@
  $deltaUsersObjectChangeErrorList = [System.Collections.ArrayList]@();
  $deltaUsersObjectChangeList = [System.Collections.ArrayList]@();
 
- if (($changeCount -le $ChangeCountThreshold) -and ($changeCount -gt 1))
+ if (($changeCount -le $ChangeCountThreshold) -and ($changeCount -ge 1))
  {
     $BelowThreshold = $true
      
