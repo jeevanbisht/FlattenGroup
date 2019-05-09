@@ -221,7 +221,6 @@
  
  #### Generate Output
  #================================================================================================================= 
-   $AppBaseFolder = "c:\temp"
    $OuputFolder=$AppBaseFolder+ "\" +  (Get-Date -UFormat "%Y-%m-%d" )
 
 
